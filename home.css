@@ -43,50 +43,35 @@ header{
 
 li a:hover{
     background-color: dimgray;
-    font-size: large;
-    
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .middle{
-    text-decoration: none;
-    padding: 20px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    
-
-}
-.middle > ul > li > a{
-  padding: 10px;
-}
-
-.middle > ul {
-    display: flex;
-    padding: 20px;
-
    
-} */
+    color: white;
+}
+
+.search{
+    display: flex;
+    justify-content: center;
+    margin-top: 34px;
+    margin-right: 50px;
+    
+}
+.search a i{
+    color: black;
+    font-size: larger;
+    padding-right: 5px;
+    
+}
+.search h3{
+    color: black;
+    font-size: large;
+    display: inline;
+}
+
+ 
+
+
+
+
+
 
 
 
