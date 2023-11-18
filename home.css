@@ -1,33 +1,92 @@
 *{
     margin: 0%;
     padding: 0%;
-}
+    text-decoration: none;
+    list-style-type: none;
+    font-family: Baskerville Old Face;
 
+}
 header{
     width: 100%;
     height: 100px;
-    background-color: rgb(207, 190, 176);
+    background-color: rgb(173, 170, 166);
 }
 .heading{
     display: flex;
-    justify-content: center;
-    flex-direction: column;
-    text-align: center;
     flex-wrap: wrap;
+    justify-content: space-between; 
+    flex-direction: row;
+    
     
 }
-.heading > h1 {
-    margin-top: 25px;
-    font-family: Baskerville Old Face;
+.name{
+    display: flex;
+    justify-content: center;
 }
-.heading-right{
+.name > h1 {
+    margin-top: 25px;
+    
+} 
+
+.middle ul{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 34px;
+    
+} 
+
+.middle > ul > li > a{
+    padding: 10px;
+    color: black;
+}
+
+li a:hover{
+    background-color: dimgray;
+    font-size: large;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .middle{
+    text-decoration: none;
+    padding: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
 
 }
-.heading-right > ul > li > a{
-    text-decoration: none;
+.middle > ul > li > a{
+  padding: 10px;
 }
-.lista{
-    list-style-type: none;
-    text-align: end;
+
+.middle > ul {
+    display: flex;
     padding: 20px;
-}
+
+   
+} */
+
+
+
