@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Candles Pure.</title>
 </head>
@@ -14,7 +14,7 @@
         <div class="heading">
             
             <div class="name">
-                <h1>Candles PURE.</h1>
+                <h1><a href="home.html">Candles PURE.</a></h1>
             </div>
             
 
@@ -37,25 +37,27 @@
 
         </div> 
     </header>
+    
     <main>
         <div class="container">
             <form class="login-form">
-                <h2 >LOGIN</h2>
-                <h5 >Please enter your e-mail and password:</h5>
+                <p >LOGIN</p>
+                <h6 >Please enter your e-mail and password:</h6>
                 <div class="namepsw">
-                     <label for="username">Username:</label>
-                    <input type="text" id="username" name="username" required>
+                    
+                    <input type="text" id="username" name="username" required placeholder="Email" class="username">
               
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" name="password" required>
+                    
+                    <input type="password" id="password" name="password" required placeholder="Password" class="username">
                 </div>
              
-              <button type="submit">Login</button>
+              <button type="submit" class="log" >LOGIN</button>
+              
             </form>
-          </div>
+            <p class="new-acc">Don't have an account? Create one</p>
+        </div>
         
-        </body>
-        </html>
+       
     </main>
 
     

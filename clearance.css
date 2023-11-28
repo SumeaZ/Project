@@ -25,8 +25,9 @@ header{
     display: flex;
     justify-content: center;
 }
-.name > h1 {
-    margin-top: 18px;
+.name > h1 > a {
+    display: flex;
+    margin-top: 20px;
     color: rgb(83, 80, 80);
     
 } 
@@ -69,18 +70,17 @@ li a:hover{
 
 
 
-
+footer{
+    margin-top: 300px;
+}
 .footeri-1{
-    margin-top: 400px;
     width: 100%;
     /* background-color: dimgray; */
     display: flex;
     flex-wrap: wrap;
-
     justify-content: space-between;
     color: rgb(76, 72, 72);
-    text-align: center;
-    
+    text-align: center;   
 }
 
 .col-1{
@@ -193,8 +193,15 @@ li a:hover{
 	align-items: center;
 	align-content: center;
     padding-top: 100px;
-    font-size: larger;
-    margin-bottom: 40px;
+    font-size: 30px;
+    margin-bottom: 100px;
+}
+.para{
+    text-align: center;
+    font-size: 18px;
+    padding-top: 10px ;
+    color: rgb(76, 72, 72) ;
+    line-height: 1.65;
 }
 .all{
 	display: flex;
@@ -207,7 +214,6 @@ li a:hover{
     margin-right: 30px;
     margin-top: 40px;
     margin-bottom: 10px;
-
 }
 
 .all > p {
@@ -215,5 +221,17 @@ li a:hover{
 }
 div h2{
     margin-bottom: 30px;
-
 }
+hr{
+    opacity: .2;
+}
+.photo > img{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.30), 0 6px 20px 0 rgba(0, 0, 0, 0.30);
+    
+} 
+.paragraph{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
