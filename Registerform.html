@@ -3,145 +3,236 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="registerform.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Candles Pure.</title>
+    <title>Register Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: left;
+            /* min-height: 90hv; */
+            margin-left: 100px;
+            background-image: url('background2.jpg');
+            background-attachment: fixed;
+            background-position: center;
+            background-size: cover;
+        }
+        .container{
+           background-color: rgba(204, 192, 158, 0.3);
+           border-radius: 5px;
+           box-shadow: 0 2px 5px rgb(0, 0, 0, 0.3);
+           width: 400px;
+           overflow: hidden;
+           max-width: 100%;
+           border: 1px solid rgb(0, 0, 0, 0.3);
+           margin-top: 50px;
+        }
+        .header{
+           background-color: rgb(200, 185, 91, 0.3);
+           padding: 15px 40px;
+           border-bottom: 1px solid #f0f0f0;
+        }
+        .header h2{
+           margin: 0;
+           text-align: center;
+        }
+        .form{
+          padding: 30px 40px;
+        }
+        .form-control{
+           margin-bottom: 10px;
+           padding-bottom:15px ;
+           position: relative;
+        }
+
+        .form-control label{
+           display: inline-block;
+           margin-bottom: 5px;
+        }
+
+        .form-control input{
+           border: 2px solid #f0f0f0;
+           border-radius: 4px;
+           display: block;
+           width: 100% ;
+           padding: 10px;
+           font-size: 14px;
+           font-family: inherit;
+        }
+       .form-control.success input{
+          border-color: rgb(89, 192, 89);
+        }
+       .form-control.error input{
+          border-color: rgb(253, 6, 6, 0.3);
+        }
+       .form-control i {
+          visibility: hidden;
+          position: absolute;
+          top: 40px;
+          right: 10px;
+        }
+       .form-control.success i.fa-check-circle{
+          visibility: visible;
+          color: rgb(89, 192, 89);
+        }
+       .form-control.error i.fa-exclamation-circle{
+          visibility: visible;
+          color: red;
+        }
+       .form-control small{
+          visibility: hidden;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+        .form-control.error small{
+          visibility: visible;
+          color: red;
+        }
+        .form button{
+           width: 100%;
+           background-color: black;
+           color: white;
+           border: 1px solid black;
+           display: block;
+           padding: 10px;
+           font-size: 16px;
+           border-radius: 4px;
+        }
+        .end{
+           padding-bottom: 15px;
+           display:flex;
+           justify-content: center;
+        }
+        .end p a{
+           color: black;
+           text-decoration: none;
+        }
+        .end p a:hover{
+           color: rgb(200, 185, 91);
+        }
+        .btn:hover{
+            background-color: rgba(200, 185, 91, 0.3);
+            color: black;
+            transition: background-color 0.3s ease-in-out;
+        }
+    </style>
+   
 </head>
 <body>
-
-
-    <header>
-        <div class="heading">
-            
-            <div class="name">
-                <h1><a href="home.html">Candles PURE.</a></h1>
+    <div class="container">
+        <div class="header">
+            <h2>Sign Up</h2>
+        </div>
+        <form class="form" id="form">
+            <div class="form-control">
+                <label>First Name:</label>
+                <input type="text" placeholder="First Name" id="firstname">
+                <i class="fa fa-check-circle"></i>
+                <i class='fa fa-exclamation-circle'></i>
+                <small>Error message</small>
             </div>
-            
-
-
-            <div class="middle">
-                <ul>
-                    <li><a href="clearance.html">CLEARANCE</a></li>
-                    <li><a href="stocklist.html">STOCKLIST</a></li>
-                    <li><a href="accessories.html">ACCESSORIES</a></li>
-                    <li><a href="refill&recycle.html">REFILL & RECYCLE</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                </ul> 
+            <div class="form-control">
+                <label>Last Name:</label>
+                <input type="text" placeholder="Last Name" id="lastname">
+                <i class="fa fa-check-circle"></i>
+                <i class='fa fa-exclamation-circle'></i>
+                <small>Error message</small>
             </div>
-
-            <div class="search">
-
-                <a href="login.html"><i class="fa fa-user"></i><h3>Login</h3></a>
-                           
+            <div class="form-control">
+                <label>Email:</label>
+                <input type="text" placeholder="Email" id="email">
+                <i class="fa fa-check-circle"></i>
+                <i class='fa fa-exclamation-circle'></i>
+                <small>Error message</small>
             </div>
-
-        </div> 
-    </header>
-
-    <main>
-       <div class="container">
-        <form class="Register-form" >
-            <p>SIGN UP</p>
-            <h6>Please enter your personal information</h6>
-            <div class="input-box">
-                    
-                <input type="text" id="firstname" name="firstname" required placeholder="firstname" class="username">
-          
-                <input type="text" id="lastname" name="lastname" required placeholder="lastname" class="username">
-
-                <input type="text" id="Email" name="email" required placeholder="Email" class="username">
-
-                <input type="password" id="password" name="password" required placeholder="Password" class="username">
-
-                
-
-
-                
+            <div class="form-control">
+                <label>Password:</label>
+                <input type="password" placeholder="Password" id="password">
+                <i class="fa fa-check-circle"></i>
+                <i class='fa fa-exclamation-circle'></i>
+                <small>Error message</small>
             </div>
-            <button type="submit" class="Register" >SIGN UP</button>
+            <div class="end">
+                <p class="new-acc">Already have an account?<a href="login.html"> Log In</a></p>
+            </div>
+            <button class="btn" onclick="valideForm()"> Sign Up</button>
         </form>
-       </div>
-
-    </main>
-    
-   
-    
-
-   <footer>
-      
-       <div class="footeri-1">
-         
-           <div class="col-1">
-             <h3>ABOUT PURE.</h3>
-             <br>
-             <br>
-             <p>
-                Hand-poured and hand-crafted in small batches, using natural 
-                <br>
-                ingredients, therapeutic grade essential oils and a blend of 
-                <br>
-                fine fragrances. Pure is a boutique fragrance studio based in 
-                <br> 
-                Singapore, focused on producing high quality, simple and 
-                <br>
-                fuss-free soy candles, essential oil blends and  home
-                <br>
-                fragrances at accessible prices.
-             </p>
-             <br>
-             <a href="#" class="fa fa-facebook"></a>
-             <a href="#" class="fa fa-instagram"></a>
-           </div>
-
-           <div class="col-2">
-               <h3>OTHERS</h3>
-               <P>FAQ</P>
-               <p>Jobs</p>
-               <p>Candle care</p>
-               <p>Corporate Gifts</p>
-               <p>Shipping & Returns</p>
-               <p>Terms & Conditions</p>
-           </div>
-           
-           <div class="col-3">
-              <h3>COSTUMER SERVICE</h3>
-              <br>
-              <br>
-              <p>Phone number: 00383-49-225-964 </p>
-              <br>
-              <p>Email: Purehush@gmail.com</p>
-              <br>
-              <p>Address: Central Valley, NY</p>
-
-           </div>
-      </div>
-
-      <div class="footer-2">
-           <div class="left">
-            <a href="home.html">© Candles PURE. </a> <br> <br>
-            <a href="https://www.shopify.com/" target="_blank">Powered by Shopify</a>
-
-           </div>
-
-           <div class="right">
-            <h3>NEWSLETTER</h3>
-            <br>
-            <p>Subscribe to our newsletter to get to know more about the 
-            <br>Candles PURE. news, events and products.</p>
-            <br>
-            <form class="form">
-               <input type="email" placeholder="Email" class="email" required>
-               <br>
-              <button type="submit" class="sub">SUBSCRIBE</button>
-            </form>
-           
-            
-            
-
-           </div>
-      </div>
- </footer>
-   
+    </div>
     
 </body>
+<script>
+    let form = document.getElementById('form');
+    let firstname = document.getElementById('firstname');
+    let lastname = document.getElementById('lastname');
+    let email = document.getElementById('email');
+    let password = document.getElementById('password');
+
+    form.addEventListener('submit', e => {
+        e.preventDefault();
+
+        valideForm();
+    });
+
+    function valideForm(){
+        let firstnameValue = firstname.value.trim();
+        let lastnameValue = lastname.value.trim();
+        let emailValue = email.value.trim();
+        let passwordValue = password.value.trim();
+
+        if(firstnameValue === ''){
+            setErrorFor(firstname, 'This field is required');
+        }else{
+            setSuccessFor(firstname);
+        }
+
+        if(lastnameValue === ''){
+            setErrorFor(lastname, 'This field is required');
+        }else{
+            setSuccessFor(lastname);
+        }
+
+        if(emailValue === ''){
+            setErrorFor(email, 'This field is required');
+        }else if(!isEmail(emailValue)){
+            setErrorFor(email, 'Not a valid email!')
+        }else{
+            setSuccessFor(email);
+        }
+
+        if(passwordValue === '') {
+		  setErrorFor(password, 'This field is required');
+	    }else {
+		   setSuccessFor(password);
+	    }
+    }
+
+    function setErrorFor(input, message) {
+	   const formControl = input.parentElement;
+	   const small = formControl.querySelector('small');
+	   formControl.className = 'form-control error';
+	   small.innerText = message;
+    }
+
+    function setSuccessFor(input) {
+	   const formControl = input.parentElement;
+	   formControl.className = 'form-control success';
+    }
+
+    function isFirstName(){
+        return /^[A-Za-z]$/.test(firstname);
+    }
+    function isLastName(){
+        return /^[A-Za-z]$/.test(lastname);
+    }
+    function isEmail(email) {
+	   return /^[A-Za-z.-_]+@+[a-z]+\.[a-z]{2,3}$/.test(email);
+    }
+    function isPassword(password){
+        return /[A-Za-z]+[0-9]{3}$/.test(password);
+    }
+</script>
 </html>
