@@ -99,6 +99,19 @@ li a:hover{
     color: rgb(200, 185, 91);
 } 
 
+.contanair{
+    padding: 4px;
+}
+.slider-all{
+    position: relative;
+}
+.slider{
+    display: flex;
+    overflow-x: auto; 
+}
+.slider::-webkit-scrollbar {
+    display: none;
+  }
 
 
 
