@@ -4,6 +4,7 @@
     text-decoration: none;
     list-style-type: none;
     font-family: Baskerville Old Face;
+    box-sizing: border-box;
 
 }
 header{
@@ -18,55 +19,84 @@ header{
 .heading{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; 
-    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    position: relative;
+    z-index: 10;
 }
 .name{
     display: flex;
     justify-content: center;
+    flex: 1;
 }
 .name > h1 > a {
     display: flex;
     margin-top: 20px;
     color: rgb(83, 80, 80);
-    
 } 
-
-.middle ul{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin-top: 27px;
-    
-} 
-
-.middle > ul > li > a{
-    padding: 10px;
-    color: rgb(83, 80, 80);
+.middle{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
 }
+.middle a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.middle a:hover {
+    color: #f1f1f1;
+}
+.middle .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+#main  {
+    transition: margin-left .5s;
+    padding: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
 
-li a:hover{
-    border-bottom: 1px solid rgb(43, 42, 42);
-} 
-
+}
+@media screen and (max-height: 450px) {
+   .middle {padding-top: 15px;}
+   .middle a {font-size: 18px;}
+}
 .search{
-    display: flex;
-    justify-content: center;
+    margin-left: auto;
     margin-top: 26px;
-    margin-right: 50px;
+    margin-right: 80px;
+   
     
 }
 .search a i{
     color: rgb(83, 80, 80);
     font-size: larger;
     padding-right: 5px;
-    
 }
 .search h3{
     color: rgb(83, 80, 80);
     font-size: large;
     display: inline;
 }
+
+
+
+
 
 
 .maini{
@@ -100,6 +130,18 @@ li a:hover{
     color: rgb(76, 72, 72) ;
     font-size: medium;
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

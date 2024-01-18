@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,14 +20,16 @@
             
 
 
-            <div class="middle">
-                <ul>
-                    <li><a href="clearance.html">CLEARANCE</a></li>
-                    <li><a href="stocklist.html">STOCKLIST</a></li>
-                    <li><a href="accessories.html">ACCESSORIES</a></li>
-                    <li><a href="refill&recycle.html">REFILL & RECYCLE</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                </ul> 
+            <div class="middle" id="mysidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="clearance.html">CLEARANCE</a>
+                <a href="stocklist.html">STOCKLIST</a>
+                <a href="refill&recycle.html">REFILL & RECYCLE</a>
+                <a href="aboutUs.html">ABOUT US</a>
+            </div>
+
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
 
             <div class="search">
@@ -37,54 +40,140 @@
 
         </div> 
     </header>
+
+
+
+
+
+
+
+
+
     <main>
-        <div class="main">
-            <div class="photomain">
-                <img src="photomain.webp" height="600px" alt="photomain">
-                <div class="text-photo">
-                    <div class="epara"><P>GET YOUR HOME READY FOR HOLIDAYS</P></div>
-                  <div class="button1"> <a href="chritmaslist.html">BUY NOW</a></div>
-                </div>
+        
+        <div class="photomain">
+            <img src="photomain.webp" alt="photomain" class="photomain1">
+            <div class="text-photo">
+                <div class="epara"><p>GET YOUR HOME READY FOR HOLIDAYS</p></div>
+                <div class="button1"> <a href="chritmaslist.html">BUY NOW</a></div>
             </div>
         </div>
+        
+
+        <div class="main-2">
+            <h2>BEST SELLERS</h2>
+            <img src="Photo for Slider/photo1.jpg" id="slider">  
+            <button class="next" onclick="change()">Next</button>
+        </div>
+        <hr>
+
+        <div class="main-3">
+            <h1>
+                Why 
+                <span>PURE.</span>
+                candles ?
+            </h1>
+
+            <div class="row">
+                <div class="text">
+                    <p>Nature is our key muse and inspiration. When creating our scented candles,
+                        we conducted in-depth research to find some of the most captivating fragrances the planet has to offer, 
+                        naturally derived aroma candles to exquisitely scent your home.Burning a scented candle is an effortless way to create a cozy, 
+                        luxurious, or tranquil mood in any room. We spent 27 hours researching and testing 32 candles under $50,
+                        and we found several warm and woodsy, fresh and floral, and sweet and citrusy candles for all of your olfactory endeavors. 
+                    </p>
+                    
+                </div>
+                <div class="text">
+                    <img src="photo1.gif" alt="">
+                </div>
+                
+            </div>
+
+        </div>
+
+        <div class="main-4">
+           <div> 
+              <h1>Candles Fit For Your Home</h1>
+              <p class="teksti">Our candles are cruelty-free, non-toxic and contain no lead, plastics, paraben, 
+                 <br>
+                  phthalates or synthetic dyes and are made with a natural soy wax blend.
+              </p>
+           </div> 
+
+           <div class="iconat">
+               <div class="icon">
+                   <img src="Candles Fit For Your Home/non-toxic.png" alt="">
+                   <p>Non-</p>
+                   <p>Toxic</p>
+               </div>
+               <div class="icon">
+                   <img src="Candles Fit For Your Home/cotton wick.png" alt="">
+                   <p>Cotton</p>
+                   <p>Wick</p>
+               </div>
+               <div class="icon">
+                   <img src="Candles Fit For Your Home/costume scents.png" alt="">
+                   <p>Costume</p>
+                   <p>Scents</p>
+               </div>
+               <div class="icon">
+                   <img src="Candles Fit For Your Home/Reusable.png" alt="">
+                   <p>Reusable</p>
+                   <p>Class Jars</p>
+               </div>
+               <div class="icon">
+                   <img src="Candles Fit For Your Home/60-80 Hour.png" alt="">
+                   <p>60-80 Hour</p>
+                   <p>Burn Time</p>
+               </div>
+           </div>
+
+
+        </div>
+
+       
+
+
+        <div class="slider-container">
+            <div class="review">
+              <p class="main-text">"Absolutely enchanted by the exquisite scents at this candle shop! The quality of their candles is unmatched. Five stars!"</p>
+              <p class="author">- John Doe</p>
+            </div>
+            <div class="review">
+              <p class="main-text">"Such a delightful experience shopping for candles here! The staff was incredibly helpful in guiding me through their extensive collection."</p>
+              <p class="author">- Kevin Hart</p>
+            </div>
+            <div class="review">
+                <p class="main-text">"The hand-poured candles are not only visually stunning but also have a long-lasting fragrance."</p>
+                <p class="author">- Kylie Jenner</p>
+            </div>
+            <div class="review">
+                <p class="main-text">"The variety of scents is impressive, and the natural ingredients make a noticeable difference."</p>
+                <p class="author">- Amber Rose</p>
+            </div>
+            <div class="review">
+                <p class="main-text">"The packaging is elegant, and the burn time exceeded my expectations. I've found my go-to spot for gifts and personal indulgence."</p>
+                <p class="author">- Tom Hardy</p>
+            </div>
+            <!-- Add more reviews as needed -->
+          
+            <div class="pagination">
+                <button class="prev-btn">Previous</button>
+                <span class="page-number">1</span>
+                <button class="next-btn">Next</button>
+            </div>
+        </div>
+          
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+
+
+
     </main>
      
-    <div class="contanair">
-      <div class="slider-all">
-        <div class="slider">
-            <div class="slidephoto">
-                <img id="slide1" src="slider/photo3.jpg" alt="photo1">
-
-            </div>
-            <div class="slidephoto">
-                <img id="slide2" src="slider/photo4.jpg" alt="photo1">
-                
-            </div>
-            <div class="slidephoto">
-                <img id="slide3" src="slider/photo5.jpg" alt="photo1">
-                
-            </div>
-            <div class="slidephoto">
-                <img id="slide4" src="slider/photo6.png" alt="photo1">
-                
-            </div>
-            <div class="slidephoto">
-                <img id="slide5" src="slider/photo7.jpg" alt="photo1">
-                
-            </div>
-            <div class="nav">
-                <a href="slide1"></a>
-                <a href="slide2"></a>
-                <a href="slide3"></a>
-                <a href="slide4"></a>
-                <a href="slide5"></a>
-
-            </div>
-
-
-        </div>
-      </div>
-    </div>
+    
 
     
 
@@ -165,4 +254,62 @@
    
     
 </body>
+<script>
+    function openNav() {
+        document.getElementById("mysidenav").style.width = "250px";
+    }
+    function closeNav(){
+        document.getElementById("mysidenav").style.width = "0"; 
+    }
+   
+    let i = 0;
+    let imgArray = ['Photo for Slider/photo1.png','Photo for Slider/photo2.png','Photo for Slider/photo3.png','Photo for Slider/photo4.png', 'Photo for Slider/photo5.png', 'Photo for Slider/photo6.png', 'Photo for Slider/photo7.png', 'Photo for Slider/photo8.png'];
+
+    function change(){
+        document.getElementById('slider').src = imgArray[i];
+
+        if(i< imgArray.length -1){
+          i++;
+        }
+        else{
+            i=0;
+        }
+            
+    }
+    document.addEventListener(onload, change());
+
+
+
+    $(document).ready(function() {
+        const reviews = $('.review');
+        const pageNumber = $('.page-number');
+        let currentIndex = 0;
+
+        function showReview(index) {
+            reviews.hide().eq(index).show();
+            pageNumber.text(index + 1);
+        }
+
+        function nextReview() {
+            currentIndex = (currentIndex + 1) % reviews.length;
+            showReview(currentIndex);
+        }
+
+        function prevReview() {
+            currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
+            showReview(currentIndex);
+        }
+
+  
+        showReview(currentIndex);
+
+  
+        setInterval(nextReview, 5000);
+
+  
+        $('.slider-container').on('click', '.next-btn', nextReview);
+        $('.slider-container').on('click', '.prev-btn', prevReview);
+    });
+    
+</script>
 </html>

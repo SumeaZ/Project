@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="christmaslist.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Clearance - Candles PURE.</title>
+    <title>Candles PURE.</title>
 </head>
 <body>
 
@@ -16,16 +16,19 @@
             <div class="name">
                 <h1><a href="home.html">Candles PURE.</a></h1>
             </div>
+            
 
 
-            <div class="middle">
-                <ul>
-                    <li><a href="clearance.html">CLEARANCE</a></li>
-                    <li><a href="stocklist.html">STOCKLIST</a></li>
-                    <li><a href="accessories.html">ACCESSORIES</a></li>
-                    <li><a href="refill&recycle.html">REFILL & RECYCLE</a></li>
-                    <li><a href="aboutus.html">ABOUT US</a></li>
-                </ul> 
+            <div class="middle" id="mysidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="clearance.html">CLEARANCE</a>
+                <a href="stocklist.html">STOCKLIST</a>
+                <a href="refill&recycle.html">REFILL & RECYCLE</a>
+                <a href="aboutUs.html">ABOUT US</a>
+            </div>
+
+            <div id="main">
+                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; </span>
             </div>
 
             <div class="search">
@@ -38,10 +41,10 @@
     </header>
 
   <main>
-        <div class="maini-ch">
+        <div class="maini">
             <p>CHRISTMAS COLLECTION</p>
-            <p class="para1">Spread the gift of radiant warmth with our Christmas candles. Thoughtfully packaged and ready to delight,
-                 these candles make for the perfect holiday gift, bringing joy and festive spirit to friends and loved ones. <br>
+            <p class="para">Spread the gift of radiant warmth with our Christmas candles. Thoughtfully packaged and ready to delight,
+                 these candles make for <br>the perfect holiday gift, bringing joy and festive spirit to friends and loved ones. <br>
     
                <br><br>
                * Spread the festive cheer and shop our full range of festive favourites
@@ -49,54 +52,63 @@
         </div>
 
         <hr>
-
-     <div class="all-photos">
+        
+        <div class="all">
         
 
-          <div class="chris1">
-               <img src="CHRISTMAS COLLECTION-photo/photo2-ch.jpg" alt="photo4">
-               <div class="paragraph1">
+          <div class="photo">
+               <img src="Christmas collection/photo2-ch.jpg" alt="photo2">
+               <div class="paragraph">
                   <p>Pure Candle - Lime Sour 71</p>
                   <br>
                   <p>$26.00</p>
                </div>
           </div>
 
-          <div class="chris1">
-              <img src="CHRISTMAS COLLECTION-photo/photo3-ch.jpg" alt="photo5">
-              <div class="paragraph1">
+          <div class="photo">
+              <img src="Christmas collection/photo3-ch.jpg" alt="photo3">
+              <div class="paragraph">
                   <p>Pure Candle - Peach Bellini 51</p>
                   <br>
                   <p>$29.00</p>
                </div>
            </div>
 
-           <div class="chris1">
-               <img src="CHRISTMAS COLLECTION-photo/photo4-ch.webp" alt="photo6">
-               <div class="paragraph1">
+           <div class="photo">
+               <img src="Christmas collection/photo4-ch.webp" alt="photo4">
+               <div class="paragraph">
                   <p>Pure Candle - Sacred Wood 83</p>
                   <br>
                   <p>$32.00</p>
                </div>
            </div>
 
-           <div class="chris1">
-               <img src="CHRISTMAS COLLECTION-photo/photo5-ch.jpg" alt="photo7">
-               <div class="paragraph1">
+           <div class="photo">
+               <img src="Christmas collection/photo5-ch.jpg" alt="photo5">
+               <div class="paragraph">
                    <p>Pure Candle - Velvet Tea 06</p>
                    <br>
                    <p>$19.00</p>
                </div>
            </div>
 
-           <div class="chris1">
-              <img src="CHRISTMAS COLLECTION-photo/photo6-ch.webp" alt="photo8">
-              <div class="paragraph1">
+           <div class="photo">
+              <img src="Christmas collection/photo6-ch.webp" alt="photo6">
+              <div class="paragraph">
                   <p>Pure Candle - Warm Hay 62</p>
                   <br>
                   <p>$45.00</p>
                </div>
            </div>
+
+           <div class="photo">
+            <img src="Christmas collection/photo7-ch.webp" alt="photo7">
+            <div class="paragraph">
+                <p>Pure Candle - Massage Candle</p>
+                <br>
+                <p>$30.00</p>
+             </div>
+         </div>
      </div>
     
 
@@ -177,4 +189,12 @@
    
     
 </body>
+<script>
+    function openNav() {
+        document.getElementById("mysidenav").style.width = "250px";
+    }
+    function closeNav(){
+        document.getElementById("mysidenav").style.width = "0"; 
+    }
+</script>
 </html>
