@@ -1,59 +1,3 @@
-
-<?php 
-
-session_start();
-
-if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
-
- ?>
-
-<!DOCTYPE html>
-
-<html>
-<body>
-
-     <h1>Hello, <?php echo $_SESSION['name']; ?> this is the website.</h1>
-
-     <a href="logout.php">Logout</a>
-
-</body>
-
-</html>
-
-<?php 
-
-}else{
-
-     header("Location: login2.php");
-
-     exit();
-
-}
-
-?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,6 +21,14 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
 
             <div class="middle" id="mysidenav">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <?php
+                session_start();
+                if ($_SESSION['isAdmin']) {
+                ?>
+                    <a href="dashboard.php">DASHBOARD</a>
+                    <?php 
+                    }
+                    ?>
                 <a href="clearance.html">CLEARANCE</a>
                 <a href="stocklist.html">STOCKLIST</a>
                 <a href="refill&recycle.html">REFILL & RECYCLE</a>
@@ -88,22 +40,25 @@ if (isset($_SESSION['id']) && isset($_SESSION['email'])) {
             </div>
 
             <div class="search">
+            <?php 
 
-                <a href="login2.php"><i class="fa fa-user"></i><h3>Login</h3></a>
+            if (isset($_SESSION['email'])) {
+                ?>
+                <h5>Hello, <?php echo $_SESSION['name']; ?></h5>
+                <a href="logout.php"><i class="fa fa-user"></i><h5>Logout</h5></a>
+            <?php 
+            }else{            
+
+            ?>
+            <a href="login2.php"><i class="fa fa-user"></i><h3>Login</h3></a>
+            <?php 
+            }
+            ?>
                            
             </div>
 
         </div> 
     </header>
-
-
-
-
-
-
-
-
-
     <main>
         
         <div class="photomain">
