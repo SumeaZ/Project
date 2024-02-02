@@ -12,7 +12,7 @@
 
     <header>
         <div class="heading">
-            
+          
             <div class="name">
                 <h1><a href="home.php">Candles PURE.</a></h1>
             </div>
@@ -23,16 +23,16 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
                 <?php
                 session_start();
-                if ($_SESSION['isAdmin']) {
+                if (isset($_SESSION['isAdmin']) && $_SESSION['isAdmin']) {
                 ?>
-                    <a href="dashboard.php">DASHBOARD</a>
+                    <a href="generaldash.php">DASHBOARD</a>
                     <?php 
                     }
                     ?>
-                <a href="clearance.html">CLEARANCE</a>
-                <a href="stocklist.html">STOCKLIST</a>
-                <a href="refill&recycle.html">REFILL & RECYCLE</a>
-                <a href="aboutUs.html">ABOUT US</a>
+                <a href="Clearance/clearance.php">CLEARANCE</a>
+                <a href="stocklist.php">STOCKLIST</a>
+                <a href="refill&recycle.php">REFILL & RECYCLE</a>
+                <a href="aboutUs.php">ABOUT US</a>
             </div>
 
             <div id="main">
@@ -44,8 +44,9 @@
 
             if (isset($_SESSION['email'])) {
                 ?>
-                <h5>Hello, <?php echo $_SESSION['name']; ?></h5>
-                <a href="logout.php"><i class="fa fa-user"></i><h5>Logout</h5></a>
+                <h5>Welcome, <?php echo $_SESSION['name']; ?></h5>
+                <a href="logout.php"><i class="fa fa-user"></i><h3>Logout</h3></a>
+               
             <?php 
             }else{            
 
@@ -53,8 +54,7 @@
             <a href="login2.php"><i class="fa fa-user"></i><h3>Login</h3></a>
             <?php 
             }
-            ?>
-                           
+            ?>     
             </div>
 
         </div> 
@@ -65,7 +65,7 @@
             <img src="Photo general/photomain.webp" alt="photomain" class="photomain1">
             <div class="text-photo">
                 <div class="epara"><p>GET YOUR HOME READY FOR HOLIDAYS</p></div>
-                <div class="button1"> <a href="chritmaslist.html">BUY NOW</a></div>
+                <div class="button1"> <a href="chritmaslist.php">BUY NOW</a></div>
             </div>
         </div>
         
@@ -166,7 +166,6 @@
                 <p class="main-text">"The packaging is elegant, and the burn time exceeded my expectations. I've found my go-to spot for gifts and personal indulgence."</p>
                 <p class="author">- Tom Hardy</p>
             </div>
-            <!-- Add more reviews as needed -->
           
             <div class="pagination">
                 <button class="prev-btn">Previous</button>
@@ -176,17 +175,8 @@
         </div>
           
         <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-
-
-
-
-
     </main>
      
-    
-
-    
-
    <footer>
       
        <div class="footeri-1">
@@ -232,94 +222,34 @@
               <p>Email: Purehush@gmail.com</p>
               <br>
               <p>Address: Central Valley, NY</p>
-
            </div>
+           
       </div>
 
       <div class="footer-2">
            <div class="left">
-            <a href="home.php">© Candles PURE. </a> <br> <br>
-            <a href="https://www.shopify.com/" target="_blank">Powered by Shopify</a>
-
-           </div>
+                <a href="home.php">© Candles PURE. </a> <br> <br>
+                <a href="https://www.shopify.com/" target="_blank">Powered by Shopify</a>
+            </div>
 
            <div class="right">
-            <h3>NEWSLETTER</h3>
-            <br>
-            <p>Subscribe to our newsletter to get to know more about the 
-            <br>Candles PURE. news, events and products.</p>
-            <br>
-            <form class="form">
-               <input type="email" placeholder="Email" class="email" required>
-               <br>
-              <button type="submit" class="sub">SUBSCRIBE</button>
-            </form>
+                <h3>NEWSLETTER</h3>
+                <br>
+                <p>Subscribe to our newsletter to get to know more about the 
+                <br>Candles PURE. news, events and products.</p>
+                <br>
+                <form class="form">
+                    <input type="email" placeholder="Email" class="email" required>
+                    <br>
+                    <button type="submit" class="sub">SUBSCRIBE</button>
+                </form>
            
-            
-            
-
-           </div>
+            </div>
       </div>
+
  </footer>
-   
+
+ <script src="JavaScript/home.js"></script>
     
 </body>
-<script>
-    function openNav() {
-        document.getElementById("mysidenav").style.width = "250px";
-    }
-    function closeNav(){
-        document.getElementById("mysidenav").style.width = "0"; 
-    }
-   
-    let i = 0;
-    let imgArray = ['Photo for Slider/photo1.png','Photo for Slider/photo2.png','Photo for Slider/photo3.png','Photo for Slider/photo4.png', 'Photo for Slider/photo5.png', 'Photo for Slider/photo6.png', 'Photo for Slider/photo7.png', 'Photo for Slider/photo8.png'];
-
-    function change(){
-        document.getElementById('slider').src = imgArray[i];
-
-        if(i< imgArray.length -1){
-          i++;
-        }
-        else{
-            i=0;
-        }
-            
-    }
-    document.addEventListener(onload, change());
-
-
-
-    $(document).ready(function() {
-        const reviews = $('.review');
-        const pageNumber = $('.page-number');
-        let currentIndex = 0;
-
-        function showReview(index) {
-            reviews.hide().eq(index).show();
-            pageNumber.text(index + 1);
-        }
-
-        function nextReview() {
-            currentIndex = (currentIndex + 1) % reviews.length;
-            showReview(currentIndex);
-        }
-
-        function prevReview() {
-            currentIndex = (currentIndex - 1 + reviews.length) % reviews.length;
-            showReview(currentIndex);
-        }
-
-  
-        showReview(currentIndex);
-
-  
-        setInterval(nextReview, 5000);
-
-  
-        $('.slider-container').on('click', '.next-btn', nextReview);
-        $('.slider-container').on('click', '.prev-btn', prevReview);
-    });
-    
-</script>
 </html>

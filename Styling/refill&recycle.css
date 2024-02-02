@@ -100,6 +100,15 @@ header{
 
 
 
+
+
+@media (max-width: 766px) {
+    .container{
+       flex-direction: column;
+        text-align: center;
+    }
+}
+
 .container{
     width: 100%;
     display: flex;
@@ -110,8 +119,6 @@ header{
 	align-content: center;
     margin-top: 100px;
     background-color: rgb(226, 214, 198);
-    height: 500px;
-
 }
 .container h1{
     font-size: 25px;
@@ -145,9 +152,14 @@ ul li a:hover{
     color: #111;
 }
 
-
-
-
+@media (max-width: 766px) {
+    .photo-box img {
+       width: fit-content;
+    }
+}
+.photo-box img{
+    width: fit-content;
+}
 .main-box {
     display: flex;
     justify-content: space-around;
@@ -173,6 +185,12 @@ ul li a:hover{
     list-style:lower-roman;
     font-size: 15px;
 }
+@media (max-width: 766px) {
+    .text-box{
+       flex-direction: column;
+        text-align: center;
+    }
+}
 .text-box p span{
     font-weight: bolder;
     color: rgb(0, 0, 0) ;
@@ -190,7 +208,6 @@ ul li a:hover{
 }
 
 .prices h3{
-    /* padding: 20px; */
     font-weight: lighter;
     color: #646060;
     padding: 15px;
@@ -237,68 +254,12 @@ ul li a:hover{
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+@media (max-width: 1046px){
+    .footeri-1{
+        text-align: center;
+    }
+    
+}
 
 
 

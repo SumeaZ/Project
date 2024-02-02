@@ -48,7 +48,7 @@ if (isset($_POST['submit'])) {
                 $_SESSION['id'] = $row['id'];
                 $_SESSION['isAdmin'] = $row['isAdmin'];
                 if($row['isAdmin']){
-                    header("Location: dashboard.php");
+                    header("Location: home.php");
                 }
                 else{
                     header("Location: home.php");
